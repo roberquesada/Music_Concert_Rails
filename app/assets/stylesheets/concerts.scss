@@ -1,0 +1,35 @@
+// Place all the styles related to the concerts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.Today-item {
+
+  &:hover {
+    .Today-itemLinkTitle {
+      background: rgba(36, 35, 35, 1);
+    }
+  }
+}
+
+.Today-itemLink {
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+.Today-itemLinkTitle {
+  background: rgba(36, 35, 35, .7);
+  color: #FFF;
+  display: block;
+  text-align: center;
+  padding: .5rem .25rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all .3s linear;
+}
+
+.Today-itemLinkImage {
+  width: 100%;
+}

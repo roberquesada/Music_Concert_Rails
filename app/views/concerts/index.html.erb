@@ -1,0 +1,30 @@
+<section class="container">
+  <div class="row">
+    <div class="col-sm-9">
+        <h1>Today concerts</h1>
+      <div class="row">
+        <% @today_concerts.each do |concert| %>
+          <article class="Today-item col-sm-3">
+            <%= link_to(concert_path(concert), class: "Today-itemLink") do %>
+              <img class="Today-itemLinkImage" src="images/default_band.jpg" alt="">
+              <span class="Today-itemLinkTitle"><%= concert.band %></span>
+            <% end %>
+          </article>
+        <% end %>
+      </div>
+    </div>
+    <aside class="col-sm-3">
+      <h2>Later this month</h2>
+      <% @later_this_month.each do |concert| %>
+        <article class="Today-item col-sm-12">
+          <%= link_to(concert_path(concert), class: "Today-itemLink") do %>
+            <img class="Today-itemLinkImage" src="images/default_band.jpg" alt="">
+            <span class="Today-itemLinkTitle"><%= concert.band %></span>
+          <% end %>
+        </article>
+      <% end %>
+    </aside>
+  </div>
+</section>
+
+<%= link_to("Add new concert", new_concert_path) %>
